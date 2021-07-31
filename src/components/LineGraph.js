@@ -11,6 +11,8 @@ const LineGraph = () => {
                 console.log(data)
             })
     });
+
+    const buildChartData =
     return (
         <div>
             <Line data />
