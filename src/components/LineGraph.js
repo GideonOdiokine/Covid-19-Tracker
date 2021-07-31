@@ -12,7 +12,9 @@ const LineGraph = () => {
             })
     });
 
-    const buildChartData =
+    const buildChartData = data => {
+
+    }
     return (
         <div>
             <Line data />
