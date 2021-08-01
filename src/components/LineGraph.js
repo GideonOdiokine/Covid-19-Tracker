@@ -13,7 +13,8 @@ const LineGraph = () => {
     });
 
     const buildChartData = data => {
-
+        const chartData = [];
+        let lastDataPoint;
     }
     return (
         <div>
