@@ -15,6 +15,16 @@ const LineGraph = () => {
     const buildChartData = data => {
         const chartData = [];
         let lastDataPoint;
+
+        data.cases.forEach(date => {
+            if (lastDataPoint) {
+                const newDataPoint = {
+                    x: date,
+                    y: data['cases'][date] - lastDatePoint
+                }
+                lastDataPoint = data['cases'][date]
+            }
+        })
     }
     return (
         <div>
