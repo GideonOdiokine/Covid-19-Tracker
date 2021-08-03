@@ -22,8 +22,9 @@ const LineGraph = () => {
                     x: date,
                     y: data['cases'][date] - lastDatePoint
                 }
-                lastDataPoint = data['cases'][date]
+                chartData.push(newDataPoint)
             }
+            lastDataPoint = data['cases'][date]
         })
     }
     return (
