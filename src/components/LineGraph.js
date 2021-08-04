@@ -26,6 +26,7 @@ const LineGraph = () => {
             }
             lastDataPoint = data['cases'][date]
         })
+        return chartData;
     }
     return (
         <div>
