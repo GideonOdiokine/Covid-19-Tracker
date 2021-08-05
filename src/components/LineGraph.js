@@ -12,19 +12,19 @@ const LineGraph = () => {
             })
     });
 
-    const buildChartData = data => {
+    const buildChartData = (data, casesType = "cases") => {
         const chartData = [];
         let lastDataPoint;
 
-        data.cases.forEach(date => {
+        data[casesType].forEach(date => {
             if (lastDataPoint) {
                 const newDataPoint = {
                     x: date,
-                    y: data['cases'][date] - lastDatePoint
+                    y: data[casesType][date] - lastDatePoint
                 }
                 chartData.push(newDataPoint)
             }
-            lastDataPoint = data['cases'][date]
+            lastDataPoint = data[casesType][date]
         })
         return chartData;
     }
