@@ -33,7 +33,7 @@ const LineGraph = () => {
 
     return (
         <div>
-            <Line data={{ dataset }} />
+            <Line data={{ dataset: { data, } }} />
         </div>
     );
 };
