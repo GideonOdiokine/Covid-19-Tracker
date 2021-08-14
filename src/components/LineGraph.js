@@ -8,7 +8,7 @@ const LineGraph = () => {
         const chartData = [];
         let lastDataPoint;
 
-        data[casesType].forEach((date) => {
+        for (date in data.cases) {
             if (lastDataPoint) {
                 const newDataPoint = {
                     x: date,
