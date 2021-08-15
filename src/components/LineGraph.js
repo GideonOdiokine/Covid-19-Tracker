@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
+
+
 const LineGraph = () => {
     const [data, setData] = useState({});
 
@@ -33,7 +35,7 @@ const LineGraph = () => {
 
     return (
         <div>
-            <Line data={{ dataset: { data, } }} />
+            <Line options={options} data={{ dataset: { data, } }} />
         </div>
     );
 };
