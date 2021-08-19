@@ -28,7 +28,7 @@ const LineGraph = () => {
                 chartData.push(newDataPoint);
             }
             lastDataPoint = data[casesType][date];
-        });
+        };
         return chartData;
     };
 
