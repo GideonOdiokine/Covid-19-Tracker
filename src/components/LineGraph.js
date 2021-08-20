@@ -9,7 +9,8 @@ const options = {
         point: {
             radius: 0,
         }
-    }
+    },
+    maintainAspectRatio: false,
 }
 
 const LineGraph = () => {
