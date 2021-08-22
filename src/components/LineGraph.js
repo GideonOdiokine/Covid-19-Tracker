@@ -11,6 +11,9 @@ const options = {
         }
     },
     maintainAspectRatio: false,
+    tooltips: {
+        mode: "index"
+    }
 }
 
 const LineGraph = () => {
