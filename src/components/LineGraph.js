@@ -12,7 +12,9 @@ const options = {
     },
     maintainAspectRatio: false,
     tooltips: {
-        mode: "index"
+        mode: "index",
+        intersect: false,
+
     }
 }
 
