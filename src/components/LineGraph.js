@@ -14,7 +14,7 @@ const options = {
     tooltips: {
         mode: "index",
         intersect: false,
-
+        callbacks:
     }
 }
 
