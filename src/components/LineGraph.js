@@ -14,7 +14,9 @@ const options = {
     tooltips: {
         mode: "index",
         intersect: false,
-        callbacks:
+        callbacks: function (tooltipItem, data) {
+            return numeral(tooltipItem.value).format("+0,0")
+        }
     }
 }
 
