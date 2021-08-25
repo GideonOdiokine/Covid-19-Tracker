@@ -52,7 +52,7 @@ const LineGraph = () => {
 
     return (
         <div>
-            <Line options={options} data={{ dataset: { data, } }} />
+            <Line options={options} data={{ dataset: { data: data } }} />
         </div>
     );
 };
