@@ -16,8 +16,8 @@ const options = {
         intersect: false,
         callbacks: function (tooltipItem, data) {
             return numeral(tooltipItem.value).format("+0,0")
-        }
-    }
+        },
+    },
 }
 
 const LineGraph = () => {
