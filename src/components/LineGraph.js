@@ -50,20 +50,19 @@ const options = {
 const LineGraph = () => {
     const [data, setData] = useState({});
 
-    const buildChartData = (data, casesType = "cases") => {
-        const chartData = [];
+    const buildChartData = (data, casesType) => {
+        let chartData = [];
         let lastDataPoint;
-
-        for (date in data.cases) {
+        for (let date in data.cases) {
             if (lastDataPoint) {
-                const newDataPoint = {
+                let newDataPoint = {
                     x: date,
-                    y: data[casesType][date] - lastDatePoint,
+                    y: data[casesType][date] - lastDataPoint,
                 };
                 chartData.push(newDataPoint);
             }
             lastDataPoint = data[casesType][date];
-        };
+        }
         return chartData;
     };
 
