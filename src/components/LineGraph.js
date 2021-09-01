@@ -67,31 +67,34 @@ const LineGraph = () => {
     };
 
     useEffect(() => {
-        fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                const chartData = buildChartData(data);
-                setData(chartData);
-            });
-    });
+        const getData = async () => {
+            await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    const chartData = buildChartData(data, "cases");
+                    setData(chartData);
+                });
+        }
+        getData();
+    }, []);
 
     return (
         <div>
-            {data?.length > 0 && (
-                <Line
-                    data={{
-                        datasets: [
-                            {
-                                backgroundColor: "rgba(204, 16, 52, 0.5)",
-                                borderColor: "#CC1034",
-                                data: data,
-                            },
-                        ],
-                    }}
-                    options={options}
-                />
-            )}
+
+            <Line
+                data={{
+                    datasets: [
+                        {
+                            backgroundColor: "rgba(204, 16, 52, 0.5)",
+                            borderColor: "#CC1034",
+                            data: data,
+                        },
+                    ],
+                }}
+                options={options}
+            />
+
         </div>
     );
 };
