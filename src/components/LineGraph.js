@@ -74,13 +74,12 @@ const LineGraph = () => {
                     const chartData = buildChartData(data, "cases");
                     setData(chartData);
                 });
-        }
+        };
         getData();
     }, []);
 
     return (
         <div>
-
             <Line
                 data={{
                     datasets: [
@@ -93,7 +92,6 @@ const LineGraph = () => {
                 }}
                 options={options}
             />
-
         </div>
     );
 };
