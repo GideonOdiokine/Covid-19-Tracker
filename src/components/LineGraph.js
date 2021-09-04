@@ -76,7 +76,7 @@ const LineGraph = () => {
                 });
         };
         getData();
-    }, []);
+    }, [data]);
 
     return (
         <div>
