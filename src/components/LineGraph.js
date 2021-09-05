@@ -50,7 +50,7 @@ const options = {
 const LineGraph = () => {
     const [data, setData] = useState({});
 
-    const buildChartData = (data, casesType) => {
+    const buildChartData = (data, casesType = "cases") => {
         let chartData = [];
         let lastDataPoint;
         for (let date in data.cases) {
@@ -76,7 +76,7 @@ const LineGraph = () => {
                 });
         };
         getData();
-    }, [data]);
+    }, []);
 
     return (
         <div>
