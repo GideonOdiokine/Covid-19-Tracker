@@ -1,11 +1,11 @@
 import React from 'react'
-import { createStructuredSelector } from 'reselect'
+
 
 export const Table = ({ countries }) => {
     return (
         <div className="table">
             {countries.map(({ country, cases }) => (
-                <tr>
+                <tr key={cases}>
                     <td>{country}</td>
                     <td>{cases}</td>
                 </tr>
