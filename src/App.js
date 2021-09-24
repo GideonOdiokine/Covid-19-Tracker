@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>COVID_19 TRACKER</h1>
-      <FormControl>
+      <FormControl className="app__dropdown" >
         <Select variant="outlined" value="abc">
           <MenuItem value="worldwide">Worldwide</MenuItem>
           <MenuItem value="worldwide">Option one</MenuItem>
