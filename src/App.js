@@ -10,7 +10,6 @@ const App = () => {
 
   useEffect(() => {
     const getCountriesData = async () => {
-
       await fetch("https://disease.sh/v3/covid-19/countries")
         .then((response) => response.json())
         .then((data) => {
@@ -30,7 +29,7 @@ const App = () => {
         <h1>COVID_19 TRACKER</h1>
         <FormControl className="app__dropdown" >
           <Select variant="outlined" value={selected} onChange={(e) => setSelected(e.target.value)}>
-            <MenuItem value="worldwide">WorldWide</MenuItem>
+            <MenuItem value={selected}>WorldWide</MenuItem>
             {countries.map(country => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
             ))}
