@@ -3,14 +3,21 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f5f6fa;
+}
 .container {
   max-width: 90%;
   margin: 10px auto;
 }
-
 .app__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+.app__stats {
+  display: flex;
+  justify-content: space-between;
 }
