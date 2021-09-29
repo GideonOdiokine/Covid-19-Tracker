@@ -7,9 +7,10 @@
 body {
   background-color: #f5f6fa;
 }
-.container {
-  max-width: 90%;
-  margin: 10px auto;
+.app {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .app__header {
   display: flex;
@@ -17,7 +18,15 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+.app__left {
+  flex: 0.9;
+}
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
 }
