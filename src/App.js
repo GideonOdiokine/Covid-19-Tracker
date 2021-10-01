@@ -7,7 +7,7 @@ import Map from './components/Map'
 
 const App = () => {
   const [countries, setCountries] = useState(['USA', "UK", "NIGERIA"])
-  const [selected, setSelected] = useState('WORLDWIDE')
+  const [selected, setSelected] = useState('WorldWide')
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const App = () => {
           <h1>COVID_19 TRACKER</h1>
           <FormControl className="app__dropdown" >
             <Select variant="outlined" value={selected} onChange={(e) => setSelected(e.target.value)}>
-              <MenuItem value={selected}>WorldWide</MenuItem>
+              <MenuItem value="WorldWide">WorldWide</MenuItem>
               {countries.map(country => (
                 <MenuItem value={country.value}>{country.name}</MenuItem>
               ))}
