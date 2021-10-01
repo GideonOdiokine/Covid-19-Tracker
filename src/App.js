@@ -16,7 +16,7 @@ const App = () => {
         .then((response) => response.json())
         .then((data) => {
           const countries = data.map((country) => ({
-            name: country.coutry,
+            name: country.country,
             value: country.countryInfo.iso2
           }))
           setCountries(countries)
