@@ -12,6 +12,8 @@ const App = () => {
   const onCountryChange = (event) => {
     const countryCode = event.target.value;
     setSelected(countryCode)
+
+    const url = countryCode === 'WorldWide' ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryCode}`
   }
 
   useEffect(() => {
