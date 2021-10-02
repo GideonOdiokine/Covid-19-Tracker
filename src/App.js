@@ -10,7 +10,8 @@ const App = () => {
   const [selected, setSelected] = useState('WorldWide')
 
   const onCountryChange = (event) => {
-
+    const countryCode = event.target.value;
+    setSelected(countryCode)
   }
 
   useEffect(() => {
