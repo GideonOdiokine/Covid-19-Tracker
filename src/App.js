@@ -35,7 +35,7 @@ const App = () => {
         <div className="app__header ">
           <h1>COVID_19 TRACKER</h1>
           <FormControl className="app__dropdown" >
-            <Select variant="outlined" value={selected} onChange={(e) => setSelected(e.target.value)}>
+            <Select variant="outlined" value={selected} onChange={onCountryChange}>
               <MenuItem value="WorldWide">WorldWide</MenuItem>
               {countries.map(country => (
                 <MenuItem value={country.value}>{country.name}</MenuItem>
