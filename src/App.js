@@ -9,6 +9,9 @@ const App = () => {
   const [countries, setCountries] = useState(['USA', "UK", "NIGERIA"])
   const [selected, setSelected] = useState('WorldWide')
 
+  const onCountryChange = (event) => {
+
+  }
 
   useEffect(() => {
     const getCountriesData = async () => {
