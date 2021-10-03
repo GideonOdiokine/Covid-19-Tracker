@@ -11,15 +11,15 @@ import InfoBoxs from "./components/InfoBoxs";
 import Map from "./components/Map";
 
 const App = () => {
-  const [countries, setCountries] = useState(["USA", "UK", "NIGERIA"]);
-  const [selected, setSelected] = useState("WorldWide");
+  const [countries, setCountries] = useState([]);
+  const [selected, setSelected] = useState("worldwide");
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
     setSelected(countryCode);
 
     const url =
-      countryCode === "WorldWide"
+      countryCode === "worldwide"
         ? "https://disease.sh/v3/covid-19/all"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
 
