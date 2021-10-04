@@ -16,27 +16,14 @@ const App = () => {
   const [countryInfo, setCountryInfo] = useState({})
 
 
-  useEffect(async () => {
-    await fetch("https://disease.sh/v3/covid-19/all")
-      .then(res => res.json())
-      .then(data => console.log(data))
-  }, [])
-  const onCountryChange = async (event) => {
-    const countryCode = event.target.value;
-
-
-    const url =
-      countryCode === "worldwide"
-        ? "https://disease.sh/v3/covid-19/all"
-        : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-
-    await fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        setSelected(countryCode);
-        setCountryInfo(data)
-      })
-  };
+  // useEffect(() => {
+  //   async function getData() {
+  //     const response = await fetch("https://disease.sh/v3/covid-19/all")
+  //       .then((response) => response.json())
+  //       .then((data) => console.log(data))
+  //   }
+  //   getData()
+  // }, [])
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -52,6 +39,21 @@ const App = () => {
     };
     getCountriesData();
   }, []);
+
+  const onCountryChange = async (event) => {
+    const countryCode = event.target.value;
+    const url =
+      countryCode === "worldwide"
+        ? "https://disease.sh/v3/covid-19/all"
+        : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+
+    await fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        setSelected(countryCode);
+        setCountryInfo(data)
+      })
+  };
 
   return (
     <div className="app">
