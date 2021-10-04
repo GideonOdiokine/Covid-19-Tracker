@@ -49,7 +49,6 @@ const App = () => {
     await fetch(url)
       .then(res => res.json())
       .then(data => {
-
         setCountryInfo(data)
       })
   };
