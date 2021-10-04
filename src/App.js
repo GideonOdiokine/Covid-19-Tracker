@@ -16,14 +16,13 @@ const App = () => {
   const [countryInfo, setCountryInfo] = useState({})
 
 
-  // useEffect(() => {
-  //   async function getData() {
-  //     const response = await fetch("https://disease.sh/v3/covid-19/all")
-  //       .then((response) => response.json())
-  //       .then((data) => console.log(data))
-  //   }
-  //   getData()
-  // }, [])
+  useEffect(() => {
+    fetch("https://disease.sh/v3/covid-19/all")
+      .then((response) => response.json())
+      .then((data) => {
+        setCountryInfo(data)
+      })
+  }, [])
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -50,7 +49,7 @@ const App = () => {
     await fetch(url)
       .then(res => res.json())
       .then(data => {
-        setSelected(countryCode);
+
         setCountryInfo(data)
       })
   };
