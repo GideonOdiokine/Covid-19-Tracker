@@ -13,10 +13,11 @@ import Map from "./components/Map";
 const App = () => {
   const [countries, setCountries] = useState([]);
   const [selected, setSelected] = useState("worldwide");
+  const [countryInfo, setCountryInfo] = useState({})
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    setSelected(countryCode);
+    
 
     const url =
       countryCode === "worldwide"
@@ -25,7 +26,10 @@ const App = () => {
 
     await fetch(url)
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => {
+        setSelected(countryCode);
+        setCountryInfo(data)
+      })
   };
 
   useEffect(() => {
