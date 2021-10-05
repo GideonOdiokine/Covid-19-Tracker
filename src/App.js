@@ -15,9 +15,13 @@ const App = () => {
   const [selected, setSelected] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({})
 
+
+  useEffect(() => {
+
+  }, [])
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    
+
 
     const url =
       countryCode === "worldwide"
