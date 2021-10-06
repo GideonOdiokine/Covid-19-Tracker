@@ -16,8 +16,8 @@ const App = () => {
   const [countryInfo, setCountryInfo] = useState({})
 
 
-  useEffect(() => {
-
+  useEffect(async () => {
+    await fetch("https://disease.sh/v3/covid-19/all")
   }, [])
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
