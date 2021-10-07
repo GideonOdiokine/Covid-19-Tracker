@@ -49,6 +49,7 @@ const App = () => {
     await fetch(url)
       .then(res => res.json())
       .then(data => {
+        setSelected(countryCode)
         setCountryInfo(data)
       })
   };
@@ -72,9 +73,9 @@ const App = () => {
           </FormControl>
         </div>
         <div className="app__stats">
-          <InfoBoxs title="Coronavirus Cases" cases={123} total={2000} />
-          <InfoBoxs title="Recovered" cases={1234} total={3000} />
-          <InfoBoxs title="Deaths" cases={12345} total={4000} />
+          <InfoBoxs title="Coronavirus Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
+          <InfoBoxs title="Recovered" cases={countryInfo.recovered} total={countryInfo.todayRecovered} />
+          <InfoBoxs title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
         </div>
 
         <Map />
