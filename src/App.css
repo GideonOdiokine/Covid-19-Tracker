@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: monospace;
   box-sizing: border-box;
 }
 
@@ -25,8 +25,25 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.infoBox {
+  flex: 20%;
+  margin-right: 10px;
+}
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .app__header {
+    margin-bottom: 0;
+  }
+  .app__stats {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  .infoBox {
+    margin-bottom: 4px;
+    margin-right: 0;
   }
 }
