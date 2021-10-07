@@ -74,7 +74,7 @@ const App = () => {
         </div>
         <div className="app__stats">
           <InfoBoxs title="Coronavirus Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
-          <InfoBoxs title="Recovered" cases={countryInfo.recovered} total={countryInfo.todayRecovered} />
+          <InfoBoxs title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
           <InfoBoxs title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
         </div>
 
