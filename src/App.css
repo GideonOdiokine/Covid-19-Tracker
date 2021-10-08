@@ -28,10 +28,7 @@ h2 {
 .app__left {
   flex: 0.9;
 }
-.app__right {
-  height: 400px;
-  overflow: scroll;
-}
+
 .app__stats {
   display: flex;
   justify-content: space-between;
@@ -40,7 +37,14 @@ h2 {
   flex: 20%;
   margin-right: 10px;
 }
-@media (max-width: 990px) {
+.table {
+  overflow-y: scroll;
+  height: 400px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  color: #6a5d5d;
+}
+table @media (max-width: 990px) {
   .app {
     flex-direction: column;
   }
