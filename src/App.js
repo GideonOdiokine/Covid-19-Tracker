@@ -10,6 +10,7 @@ import "./App.css";
 import InfoBoxs from "./components/InfoBoxs";
 import Map from "./components/Map";
 import { Table } from "./components/Table";
+import { sortData } from "./components/utili";
 
 const App = () => {
   const [countries, setCountries] = useState([]);
@@ -35,8 +36,9 @@ const App = () => {
             name: country.country,
             value: country.countryInfo.iso2,
           }));
+          const sortedData = sortData(data)
           setCountries(countries);
-          setTableData(data)
+          setTableData(sortedData)
         });
     };
     getCountriesData();
