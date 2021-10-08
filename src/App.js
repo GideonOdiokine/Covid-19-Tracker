@@ -89,6 +89,7 @@ const App = () => {
         <CardContent>
           <h3>Live cases by country</h3>
           <Table countries={tableData} />
+          <h3>Worldwide new cases</h3>
         </CardContent>
       </Card>
     </div>
