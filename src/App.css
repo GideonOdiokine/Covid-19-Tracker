@@ -30,7 +30,7 @@ h2 {
 }
 .app__right {
   height: 400px;
-  overflow: auto;
+  overflow: scroll;
 }
 .app__stats {
   display: flex;
