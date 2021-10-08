@@ -5,7 +5,7 @@ const LineGraph = () => {
     const [data, setData] = useState({});
 
     useEffect(() => {
-
+        fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
     })
     return (
         <div>
