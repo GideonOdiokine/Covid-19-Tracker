@@ -1,11 +1,12 @@
 * {
   margin: 0;
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   box-sizing: border-box;
 }
 
 body {
   background-color: #f5f6fa;
+  font-size: 20px;
 }
 .app {
   padding-top: 20px;
@@ -17,6 +18,10 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+.app__header h1 {
+  font-family: monospace;
+  font-size: 20px;
 }
 .app__left {
   flex: 0.9;
@@ -36,7 +41,10 @@ body {
 }
 @media (max-width: 500px) {
   .app__header {
-    margin-bottom: 0;
+    margin: 4px 10px;
+  }
+  .app__header h1 {
+    font-size: 18px;
   }
   .app__stats {
     flex-direction: column;
