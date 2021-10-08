@@ -14,6 +14,7 @@ const App = () => {
   const [countries, setCountries] = useState([]);
   const [selected, setSelected] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({})
+  const [tableData, setTableData] = useState([])
 
 
   useEffect(() => {
@@ -34,6 +35,7 @@ const App = () => {
             value: country.countryInfo.iso2,
           }));
           setCountries(countries);
+          setTableData(data)
         });
     };
     getCountriesData();
@@ -84,7 +86,7 @@ const App = () => {
         <CardContent>
           <h3>Live case</h3>
           <h2>Worldwide cases</h2>
-
+          <Table countries={tableData} />
         </CardContent>
       </Card>
     </div>
