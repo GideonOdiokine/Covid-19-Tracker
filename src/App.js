@@ -9,6 +9,7 @@ import {
 import "./App.css";
 import InfoBoxs from "./components/InfoBoxs";
 import Map from "./components/Map";
+import { Table } from "./components/Table";
 
 const App = () => {
   const [countries, setCountries] = useState([]);
