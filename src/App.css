@@ -44,9 +44,14 @@ h2 {
   background-color: #ffffff;
   color: #6a5d5d;
 }
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
 .table td {
   font-family: sans-serif;
   font-size: 18px;
+  padding: 0.5rem;
 }
 .table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
