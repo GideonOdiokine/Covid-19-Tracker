@@ -44,8 +44,8 @@ h2 {
   background-color: #ffffff;
   color: #6a5d5d;
 }
-table td {
-  font-family: monospace;
+.table td {
+  font-family: sans-serif;
 }
 @media (max-width: 990px) {
   .app {
