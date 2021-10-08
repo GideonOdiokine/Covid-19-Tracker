@@ -85,7 +85,7 @@ const App = () => {
       </div>
       <Card className="app__right">
         <CardContent>
-          <h3>Live case</h3>
+          <h3>Live cases by country</h3>
           <Table countries={tableData} />
         </CardContent>
       </Card>
