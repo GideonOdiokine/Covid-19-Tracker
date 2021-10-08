@@ -48,6 +48,9 @@ h2 {
   font-family: sans-serif;
   font-size: 18px;
 }
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
 @media (max-width: 990px) {
   .app {
     flex-direction: column;

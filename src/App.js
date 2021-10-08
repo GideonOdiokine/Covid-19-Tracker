@@ -86,7 +86,6 @@ const App = () => {
       <Card className="app__right">
         <CardContent>
           <h3>Live case</h3>
-          {/* <h2>Worldwide cases</h2> */}
           <Table countries={tableData} />
         </CardContent>
       </Card>
