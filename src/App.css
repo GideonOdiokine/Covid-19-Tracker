@@ -28,6 +28,10 @@ h2 {
 .app__left {
   flex: 0.9;
 }
+.app__right {
+  height: 400px;
+  overflow: auto;
+}
 .app__stats {
   display: flex;
   justify-content: space-between;
