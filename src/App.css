@@ -37,12 +37,18 @@ h2 {
   flex: 20%;
   margin-right: 10px;
 }
+
+/* Table styles */
+table {
+  width: 100%;
+}
 .table {
   overflow-y: scroll;
   height: 400px;
   margin-top: 20px;
   background-color: #ffffff;
   color: #6a5d5d;
+  width: 100%;
 }
 .table tr {
   display: flex;
