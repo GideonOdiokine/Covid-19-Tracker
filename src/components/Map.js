@@ -1,5 +1,5 @@
 import React from 'react'
-import { Map as LeafletMap, TileLayer } from "leaflet/map/Map";
+import { Map as LeafletMap, TileLayer } from "react-leaflet";
 
 
 
@@ -16,4 +16,4 @@ const Map = () => {
     )
 }
 
-export default Map
+export default Map;
