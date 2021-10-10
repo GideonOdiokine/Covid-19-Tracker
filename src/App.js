@@ -20,8 +20,8 @@ const App = () => {
   const [selected, setSelected] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({})
   const [tableData, setTableData] = useState([])
-  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 })
-  const [mapZoom, setMapZoom] = useState(3)
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(3);
 
 
   useEffect(() => {
@@ -61,6 +61,8 @@ const App = () => {
       .then(data => {
         setSelected(countryCode)
         setCountryInfo(data)
+        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
       })
   };
 
