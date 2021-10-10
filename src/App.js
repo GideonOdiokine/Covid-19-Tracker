@@ -22,6 +22,7 @@ const App = () => {
   const [tableData, setTableData] = useState([])
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(3);
+  const [mapCountries, setMapCountries] = useState([])
 
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const App = () => {
           const sortedData = sortData(data)
           setCountries(countries);
           setTableData(sortedData)
+          setMapCountries(data)
         });
     };
     getCountriesData();
@@ -90,7 +92,7 @@ const App = () => {
           <InfoBoxs title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
         </div>
 
-        <Map center={mapCenter} zoom={mapZoom} />
+        <Map center={mapCenter} zoom={mapZoom} countries={mapCountries} />
       </div>
       <Card className="app__right">
         <CardContent>
