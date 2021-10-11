@@ -10,7 +10,7 @@ import "./App.css";
 import InfoBoxs from "./components/InfoBoxs";
 import Map from "./components/Map";
 import { Table } from "./components/Table";
-import { sortData } from "./components/utili";
+import { sortData, prettyPrintStat } from "./components/utili";
 import LineGraph from "./components/LineGraph";
 import "leaflet/dist/leaflet.css"
 
@@ -87,9 +87,9 @@ const App = () => {
           </FormControl>
         </div>
         <div className="app__stats">
-          <InfoBoxs title="Coronavirus Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
-          <InfoBoxs title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
-          <InfoBoxs title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+          <InfoBoxs title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)} />
+          <InfoBoxs title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)} />
+          <InfoBoxs title="Deaths" cases={prettyPrintStat(countryInfo.todayDeaths)} total={prettyPrintStat(countryInfo.deaths)} />
         </div>
 
         <Map center={mapCenter} zoom={mapZoom} countries={mapCountries} />
