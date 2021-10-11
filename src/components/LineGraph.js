@@ -87,7 +87,7 @@ const LineGraph = ({ casesType = "cases" }) => {
                     data={{
                         datasets: [
                             {
-                                label: '',
+                                label: 'cases worldwide',
                                 fill: false,
                                 backgroundColor: "rgba(204, 16, 52, 0.5)",
                                 borderColor: "#CC1034",
