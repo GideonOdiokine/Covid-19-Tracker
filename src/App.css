@@ -41,7 +41,7 @@ h2 {
   margin-right: 10px;
 }
 
-/* .infoBox--selected {
+.infoBox--selected {
   border-top: 10px solid greenyellow;
 }
 
@@ -51,7 +51,7 @@ h2 {
 
 .infoBox__cases--green {
   color: lightgreen !important;
-} */
+}
 
 .infoBox__cases {
   color: #cc1034;
