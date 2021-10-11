@@ -1,6 +1,7 @@
 import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker } from "react-leaflet";
 import { Icon } from 'leaflet'
+import { showDataOnMap } from './utili';
 
 
 const icon = new Icon({
@@ -8,7 +9,7 @@ const icon = new Icon({
     iconSize: [25, 25],
 });
 
-const Map = ({ center, zoom, countries }) => {
+const Map = ({ center, zoom, casesType, countries }) => {
     return (
         <div className="map" >
             <LeafletMap center={center} zoom={zoom}>
@@ -16,8 +17,9 @@ const Map = ({ center, zoom, countries }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={center} icon={icon}>
-                </Marker>
+                <Marker position={center} icon={icon} />
+
+                {showDataOnMap(countries, casesType)}
             </LeafletMap>
         </div>
     )
