@@ -35,7 +35,7 @@ h2 {
 }
 .infoBox {
   flex: 1;
-  /* margin-right: 10px; */
+  cursor: pointer;
 }
 .infoBox:not(:last-child) {
   margin-right: 10px;
